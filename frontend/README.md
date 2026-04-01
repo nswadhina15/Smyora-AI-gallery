@@ -72,7 +72,7 @@ RAZORPAY_KEY_SECRET=your_secret_here
 
 Start the Node.js server:
 npm run dev
-# or: node index.js
+or: node index.js
 
 ### 💳 Testing Payments
 The app is currently configured to use Razorpay Test Mode. When the Lumina Upgrade modal appears, click "Get 100 Sparks" and use the official Razorpay test credentials (any random 10-digit mobile number, and the test card provided in the Razorpay UI) to simulate a successful transaction.

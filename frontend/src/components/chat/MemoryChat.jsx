@@ -44,7 +44,7 @@ export default function MemoryChat({ onPhotoClick }) {
       }));
 
       // 3. Send query + metadata to your Node backend
-      const res = await fetch('http://localhost:5000/api/chat/query', {
+      const res = await fetch('https://smyora-backend.onrender.com/api/chat/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

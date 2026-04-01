@@ -100,7 +100,7 @@ export default function Lightbox({ photo, onClose, onDelete, isDeleting, onToggl
 
     setIsScanningDNA(true);
     try {
-      const res = await fetch('http://localhost:5000/api/vision/dna', {
+      const res = await fetch('https://smyora-backend.onrender.com/api/vision/dna', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ imageUrl: photo.url })

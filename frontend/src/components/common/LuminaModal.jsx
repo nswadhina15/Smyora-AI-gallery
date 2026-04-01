@@ -20,7 +20,7 @@ export default function LuminaModal({ onClose }) {
         script.onload = resolve;
       });
 
-      const response = await fetch('http://localhost:5000/api/checkout/razorpay', {
+      const response = await fetch('https://smyora-backend.onrender.com/api/checkout/razorpay', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -45,7 +45,7 @@ export default function LuminaModal({ onClose }) {
         handler: async function (response) {
           try {
             // 1. Send payment details to our backend for security verification
-            const verifyRes = await fetch('http://localhost:5000/api/checkout/verify', {
+            const verifyRes = await fetch('https://smyora-backend.onrender.com/api/checkout/verify', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({

@@ -27,7 +27,7 @@ export default function UploadZone({ onUploadComplete }) {
       }
 
       // 1. Fetch Cloudinary signature and parameters
-      const signatureRes = await fetch('http://localhost:5000/api/upload/signature');
+      const signatureRes = await fetch('https://smyora-backend.onrender.com/api/upload/signature');
       if (!signatureRes.ok) throw new Error('Failed to fetch signature');
       
       const { 

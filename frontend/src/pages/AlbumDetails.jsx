@@ -74,7 +74,7 @@ export default function AlbumDetails() {
       }, []);
       const uniqueTags = [...new Set(allTags)];
 
-      const res = await fetch('http://localhost:5000/api/chat/synthesize', {
+      const res = await fetch('https://smyora-backend.onrender.com/api/chat/synthesize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ tags: uniqueTags, albumName: album.name })

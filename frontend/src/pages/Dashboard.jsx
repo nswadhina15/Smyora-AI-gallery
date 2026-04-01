@@ -50,7 +50,7 @@ export default function Dashboard() {
     setAiCaption(''); // Clear old caption
 
     try {
-      const res = await fetch('http://localhost:5000/api/chat/analyze', {
+      const res = await fetch('https://smyora-backend.onrender.com/api/chat/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: searchInput })

@@ -57,7 +57,7 @@ export default function PhotoGrid({ refreshTrigger, onRefresh, searchQuery = '',
     if (!window.confirm("Are you sure you want to permanently delete this photo?")) return;
     setIsDeleting(true);
     try {
-      const cloudRes = await fetch('http://localhost:5000/api/upload/delete', {
+      const cloudRes = await fetch('https://smyora-backend.onrender.com/api/upload/delete', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ publicId: photo.publicId })

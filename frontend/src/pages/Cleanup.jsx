@@ -95,7 +95,7 @@ export default function Cleanup() {
         setDeletingId(photo.id);
         try {
             // Delete from Cloudinary
-            const cloudRes = await fetch('http://localhost:5000/api/upload/delete', {
+            const cloudRes = await fetch('https://smyora-backend.onrender.com/api/upload/delete', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ publicId: photo.publicId })
