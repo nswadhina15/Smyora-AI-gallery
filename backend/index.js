@@ -19,7 +19,7 @@ const razorpayInstance = new Razorpay({
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://smyora-gallery.vercel.app'], 
+  origin: ['http://localhost:5173', 'https://smyora-ai-gallery.vercel.app'],
   credentials: true
 }));
 app.use(express.json());
