@@ -1,28 +1,33 @@
 # 🌌 Smyora
+
 > **Stories that stay with you.**
 
 Smyora is a next-generation, full-stack AI photo gallery and memory vault. It goes beyond simple photo storage by offering **Alt-Reality dimension warping**, **AI memory synthesis**, and a built-in premium token economy ("Sparks") powered by Razorpay.
 
 ## ✨ Key Features
-* **🔐 Secure Photo Vault:** Upload, tag, and organize memories safely using Firebase.
-* **🌀 Alt-Reality Studio:** Tear the fabric of reality. Uses Cloudinary Generative AI to completely replace photo backgrounds (Anime, Cyberpunk, Ghibli, etc.).
-* **🧠 Memory Synthesis:** Analyzes the tags and context of your photo albums to generate custom, poetic summaries of your memories.
-* **⚡ The "Sparks" Economy:** A fully functioning micro-transaction system. Users spend "Sparks" to perform AI generations.
-* **💎 Lumina Premium Tier:** Integrated Razorpay payment gateway with cryptographic signature verification for users to purchase more Sparks securely.
+
+- **🔐 Secure Photo Vault:** Upload, tag, and organize memories safely using Firebase.
+- **🌀 Alt-Reality Studio:** Tear the fabric of reality. Uses Cloudinary Generative AI to completely replace photo backgrounds (Anime, Cyberpunk, Ghibli, etc.).
+- **🧠 Memory Synthesis:** Analyzes the tags and context of your photo albums to generate custom, poetic summaries of your memories.
+- **⚡ The "Sparks" Economy:** A fully functioning micro-transaction system. Users spend "Sparks" to perform AI generations.
+- **💎 Lumina Premium Tier:** Integrated Razorpay payment gateway with cryptographic signature verification for users to purchase more Sparks securely.
 
 ## 🛠️ Tech Stack
+
 **Frontend:**
-* React (Vite)
-* Tailwind CSS (Styling & Glassmorphism UI)
-* Framer Motion (Advanced animations)
-* React Router (Navigation)
+
+- React (Vite)
+- Tailwind CSS (Styling & Glassmorphism UI)
+- Framer Motion (Advanced animations)
+- React Router (Navigation)
 
 **Backend & Infrastructure:**
-* Node.js & Express (REST API)
-* Firebase Authentication (Secure login/signup)
-* Firebase Firestore (NoSQL Database for users, photos, and Spark balances)
-* Cloudinary API (Image hosting & Generative AI Background Replacement)
-* Razorpay (Payment processing & secure webhook verification)
+
+- Node.js & Express (REST API)
+- Firebase Authentication (Secure login/signup)
+- Firebase Firestore (NoSQL Database for users, photos, and Spark balances)
+- Cloudinary API (Image hosting & Generative AI Background Replacement)
+- Razorpay (Payment processing & secure webhook verification)
 
 ---
 
@@ -31,11 +36,12 @@ Smyora is a next-generation, full-stack AI photo gallery and memory vault. It go
 Follow these steps to get a local copy of Smyora up and running.
 
 ### 1. Clone the repository
+
 ```bash
 git clone [https://github.com/YOUR_USERNAME/smyora-ai-gallery.git](https://github.com/YOUR_USERNAME/smyora-ai-gallery.git)
 cd smyora-ai-gallery
 
-2. Frontend Setup
+### 2. Frontend Setup
 Open a terminal and navigate to the frontend directory:
 
 cd frontend
@@ -55,7 +61,7 @@ VITE_CLOUDINARY_UPLOAD_PRESET=your_upload_preset
 Start the Vite development server:
 npm run dev
 
-3. Backend Setup
+### 3. Backend Setup
 Open a second terminal and navigate to the backend directory:
 cd backend
 npm install
@@ -69,7 +75,7 @@ Start the Node.js server:
 npm run dev
 # or: node index.js
 
-💳 Testing Payments
+### 💳 Testing Payments
 The app is currently configured to use Razorpay Test Mode. When the Lumina Upgrade modal appears, click "Get 100 Sparks" and use the official Razorpay test credentials (any random 10-digit mobile number, and the test card provided in the Razorpay UI) to simulate a successful transaction.
 
 🔮 Future Roadmap
@@ -88,3 +94,4 @@ The app is currently configured to use Razorpay Test Mode. When the Lumina Upgra
 4. Run your Git commands (`git add README.md`, `git commit -m "Added README"`, `git push origin main`).
 
 Once it's pushed, GitHub will automatically render it as the beautiful front page of your repository!
+```
