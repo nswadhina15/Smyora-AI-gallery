@@ -1,0 +1,14 @@
+# Catch dependencies in both folders
+node_modules/
+
+# CRITICAL: Catch all environment variables in both folders
+.env
+.env.local
+.env.*
+
+# Catch build outputs from Vite/React
+dist/
+build/
+
+# OS generated files
+.DS_Store
