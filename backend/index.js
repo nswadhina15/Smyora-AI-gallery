@@ -19,21 +19,17 @@ const razorpayInstance = new Razorpay({
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://smyora-ai-gallery.vercel.app'],
+  origin: ['http://localhost:5173', 'https://smyora-ai-gallery.vercel.app'], 
   credentials: true
 }));
 app.use(express.json());
 
-
 // ==========================================
 // 💳 RAZORPAY PAYMENT ROUTES
 // ==========================================
-
-// 1. Create the Order (This was missing!)
 app.post('/api/checkout/razorpay', async (req, res) => {
   try {
     const { userId, email } = req.body;
-
     const options = {
       amount: 49900, // Amount in paise (499.00 INR)
       currency: "INR",
@@ -58,19 +54,16 @@ app.post('/api/checkout/razorpay', async (req, res) => {
   }
 });
 
-// 2. Verify the Signature
 app.post('/api/checkout/verify', async (req, res) => {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
-    // Create our own signature using your secret key
     const sign = razorpay_order_id + "|" + razorpay_payment_id;
     const expectedSignature = crypto
       .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
       .update(sign.toString())
       .digest("hex");
 
-    // Compare our signature with Razorpay's signature
     if (razorpay_signature === expectedSignature) {
       return res.status(200).json({ success: true, message: "Payment verified successfully" });
     } else {
@@ -81,7 +74,6 @@ app.post('/api/checkout/verify', async (req, res) => {
     res.status(500).json({ message: "Internal Server Error!" });
   }
 });
-
 
 // ==========================================
 // 📸 APP ROUTES
@@ -98,8 +90,8 @@ app.get('/health', (req, res) => {
 });
 
 // ==========================================
-// 🚀 START SERVER (Only call this once at the bottom)
+// 🚀 START SERVER
 // ==========================================
 app.listen(PORT, () => {
-  console.log(`🚀 Secure API Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Secure API Server running on port ${PORT}`);
 });
