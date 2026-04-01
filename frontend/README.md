@@ -37,7 +37,6 @@ Follow these steps to get a local copy of Smyora up and running.
 
 ### 1. Clone the repository
 
-```bash
 git clone [https://github.com/YOUR_USERNAME/smyora-ai-gallery.git](https://github.com/YOUR_USERNAME/smyora-ai-gallery.git)
 cd smyora-ai-gallery
 
